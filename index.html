@@ -47,6 +47,27 @@
   .detail strong { font-size: 23px; }
 }
 
+
+/* V5 · 怪美的：不對稱幾何彩蛋 */
+.odd-art{width:min(320px,78vw);height:230px;position:relative;margin:30px auto 30px;isolation:isolate}
+.odd-art span{display:block;position:absolute}
+.odd-ring{width:174px;height:174px;border:2px solid #7bd4dc;border-radius:50%;left:69px;top:22px;opacity:.9}
+.odd-arc{width:138px;height:138px;left:49px;top:52px;border-radius:50% 50% 12% 50%;background:#c8f16b;clip-path:polygon(0 0,100% 0,100% 100%,60% 100%,60% 45%,0 45%);transform:rotate(-17deg)}
+.odd-disc{width:105px;height:105px;left:126px;top:80px;background:#64c9d3;border-radius:50%;clip-path:polygon(0 0,100% 0,100% 100%,0 100%,0 50%,55% 50%,55% 0);opacity:.85}
+.odd-tile{width:112px;height:112px;top:77px;left:165px;border:2px solid #ed78b7;border-radius:13px;transform:rotate(24deg)}
+.odd-stroke{width:160px;height:1px;background:#f2d58b;top:115px;left:18px;transform:rotate(-12deg);opacity:.85}
+.odd-dot{height:15px;width:15px;border-radius:50%;background:#f6c27d;left:248px;top:33px}
+.odd-star{font-size:26px;color:#e88fbf;left:41px;top:161px}
+.teaser.in-view .odd-ring{animation:odd-turn 13s ease-in-out infinite alternate}
+.teaser.in-view .odd-tile{animation:odd-rock 7s ease-in-out infinite alternate}
+.teaser.in-view .odd-disc{animation:odd-float 6s ease-in-out infinite alternate}
+.teaser.in-view .odd-dot{animation:odd-float 4s ease-in-out infinite alternate-reverse}
+@keyframes odd-turn{to{transform:rotate(24deg) scale(1.035)}}
+@keyframes odd-rock{to{transform:rotate(38deg) translateY(-7px)}}
+@keyframes odd-float{to{transform:translateY(-11px)}}
+@media(max-width:720px){.odd-art{height:218px;margin:30px auto 28px}.teaser h2{font-size:clamp(32px,8vw,43px)}}
+@media(prefers-reduced-motion:reduce){.teaser.in-view .odd-ring,.teaser.in-view .odd-tile,.teaser.in-view .odd-disc,.teaser.in-view .odd-dot{animation:none}}
+
 </style>
 </head>
 <body>
@@ -60,7 +81,10 @@
  
 </section>
 <section class="section invite wrap reveal"><div class="eyebrow">AN EVENING TOGETHER</div><h2>把時間，留給彼此。</h2><p>忙碌了一整年，<br>今晚，讓我們暫時放下日常，<br>為夥伴喝采，也為每一段共同走過的旅程舉杯。</p></section>
-<section class="section teaser reveal" id="surprise"><div class="wrap"><div class="eyebrow">A LITTLE SURPRISE</div><div class="pulse-art" aria-label="抽象彩色律動，暗示不一樣的開場"><span style="--h:38px;--d:-.2s"></span><span style="--h:82px;--d:-1.4s"></span><span style="--h:60px;--d:-.8s"></span><span style="--h:100px;--d:-2.1s"></span><span style="--h:47px;--d:-1.1s"></span><span style="--h:112px;--d:-.5s"></span><span style="--h:67px;--d:-1.8s"></span><span style="--h:42px;--d:-.3s"></span><span style="--h:96px;--d:-1.5s"></span><span style="--h:67px;--d:-2.3s"></span><span style="--h:115px;--d:-.7s"></span><span style="--h:48px;--d:-1.9s"></span><span style="--h:87px;--d:-1.2s"></span><span style="--h:59px;--d:-2.5s"></span><span style="--h:104px;--d:-.4s"></span><span style="--h:72px;--d:-1.6s"></span><span style="--h:36px;--d:-.9s"></span></div><h2>今晚，有點不一樣。</h2><div class="fine">EXPECT THE UNEXPECTED.</div></div></section>
+<section class="section teaser reveal" id="surprise"><div class="wrap"><div class="eyebrow">A LITTLE SURPRISE</div>
+<div class="odd-art" role="img" aria-label="由不對稱圓弧、色塊、圓點構成的抽象幾何圖形">
+  <span class="odd-ring"></span><span class="odd-arc"></span><span class="odd-disc"></span><span class="odd-tile"></span><span class="odd-stroke"></span><span class="odd-dot"></span><span class="odd-star">✦</span>
+</div><h2>我們，怪美的。</h2></div></section>
 <section class="section details"><div class="wrap reveal"><div class="eyebrow">THE DETAILS</div><h2>相聚的時間與地點</h2><div class="details-grid"><div class="detail"><div class="mini">DATE · 日期</div><strong>2026 年 12 月 12 日</strong><div class="note">星期六</div></div><div class="detail"><div class="mini">TIME · 時間</div><strong>17:30 開放入場</strong><div class="note">預計 21:30 離場</div></div><div class="detail"><div class="mini">VENUE · 地點</div><strong>珍豪大飯店<br>三樓宴會一廳</strong><div class="note">新北市三重區光復路一段 67 號</div></div></div><p class="location">交通建議：搭乘捷運至先嗇宮站，步行約 6 分鐘。<br><a href="https://www.google.com/maps/search/?api=1&query=%E7%8F%8D%E8%B1%AA%E5%A4%A7%E9%A3%AF%E5%BA%97%20%E4%B8%89%E9%87%8D" target="_blank" rel="noopener noreferrer">查看 Google 地圖 ↗</a></p></div></section>
 <section class="section rsvp wrap reveal" id="registration"><div class="eyebrow">SAVE YOUR SEAT</div><h2>這個夜晚，<br>為你留了一個位置。</h2><p>期待那天，在現場見到你。</p><a id="rsvpLink" class="cta inactive" aria-disabled="true">報名即將開放</a><p class="under-cta" id="rsvpHint">正式 Google 表單建立後，報名入口將於此開放。</p></section>
 </main><footer class="footer">主婦聯盟生活消費合作社 · 2026 北區年終晚宴</footer>
