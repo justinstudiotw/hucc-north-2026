@@ -86,13 +86,9 @@
   <span class="odd-ring"></span><span class="odd-arc"></span><span class="odd-disc"></span><span class="odd-tile"></span><span class="odd-stroke"></span><span class="odd-dot"></span><span class="odd-star">✦</span>
 </div><h2>我們，怪美的。</h2></div></section>
 <section class="section details"><div class="wrap reveal"><div class="eyebrow">THE DETAILS</div><h2>相聚的時間與地點</h2><div class="details-grid"><div class="detail"><div class="mini">DATE · 日期</div><strong>2026 年 12 月 12 日</strong><div class="note">星期六</div></div><div class="detail"><div class="mini">TIME · 時間</div><strong>18:00 開放入場</strong><div class="note">預計 21:30 離場</div></div><div class="detail"><div class="mini">VENUE · 地點</div><strong>珍豪大飯店<br>三樓宴會一廳</strong><div class="note">新北市三重區光復路一段 67 號</div></div></div><p class="location">交通建議：搭乘捷運至先嗇宮站，步行約 6 分鐘。<br><a href="https://www.google.com/maps/search/?api=1&query=%E7%8F%8D%E8%B1%AA%E5%A4%A7%E9%A3%AF%E5%BA%97%20%E4%B8%89%E9%87%8D" target="_blank" rel="noopener noreferrer">查看 Google 地圖 ↗</a></p></div></section>
-<section class="section rsvp wrap reveal" id="registration"><div class="eyebrow">SAVE YOUR SEAT</div><h2>這個夜晚，<br>為你留了一個位置。</h2><p>期待那天，在現場見到你。</p><a id="rsvpLink" class="cta inactive" aria-disabled="true">出席報名請點擊此處填寫資料</a><p class="under-cta" id="rsvpHint">正式 Google 表單建立後，報名入口將於此開放。</p></section>
+<section class="section rsvp wrap reveal" id="registration"><div class="eyebrow">SAVE YOUR SEAT</div><h2>這個夜晚，<br>為你留了一個位置。</h2><p>期待那天，在現場見到你。</p></section>
 </main><footer class="footer">主婦聯盟生活消費合作社 · 2026 北區年終晚宴</footer>
 <script>
-/* 正式表單建立後：將此處空字串替換為 Google Forms 填寫網址。 */
-const GOOGLE_FORM_URL = "https://forms.gle/A8eLg45AkM9ANUXg7";
-const button=document.getElementById('rsvpLink');
-if(GOOGLE_FORM_URL.trim()){button.href=GOOGLE_FORM_URL.trim();button.target='_blank';button.rel='noopener noreferrer';button.textContent='出席報名請點擊此處填寫資料';button.classList.remove('inactive');button.removeAttribute('aria-disabled');document.getElementById('rsvpHint').textContent='將開啟 Google 表單填寫出席資訊。';}
 if('IntersectionObserver' in window){const observer=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in-view');observer.unobserve(e.target);}})},{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));}else{document.querySelectorAll('.reveal').forEach(el=>el.classList.add('in-view'));}
 </script>
 </body></html>
